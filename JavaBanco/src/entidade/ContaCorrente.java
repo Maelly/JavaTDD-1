@@ -10,14 +10,12 @@ package entidade;
  	}
  	
  	public float credito(float valor) {
- 		if (valor <= 0) throw new IllegalArgumentException("O valor da operacao deve ser maior que zero");
  		_saldo += valor;
  		_operacoes.add(valor);
  		return _saldo;
  	}
  
  	public float debito(float valor) {
- 		if (valor <= 0) throw new IllegalArgumentException("O valor da operacao deve ser maior que zero");
  		_saldo -= valor;
  		_operacoes.add(-valor);
  		return _saldo;
@@ -26,4 +24,4 @@ package entidade;
  	public ArrayList<Float> extrato() {
  		return _operacoes;
  	}
- }
+  }
